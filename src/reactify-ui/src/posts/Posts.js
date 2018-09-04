@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import 'whatwg-fetch'
-import cookie from 'react-cookies'
-import { Link } from 'react-router-dom'
-import PostInline from './PostInline'
+import 'whatwg-fetch';
+import cookie from 'react-cookies';
+import { Link } from 'react-router-dom';
+import PostInline from './PostInline';
 
 class Posts extends Component {
 
@@ -30,7 +30,7 @@ class Posts extends Component {
     }
     
   loadPosts(nextEndpoint){
-      let endpoint = '/api/posts/' 
+      let endpoint = '/api/posts/'   // The relative URL to see the REST API. Can also use const instead of let
       if (nextEndpoint !== undefined) {
           endpoint = nextEndpoint
       }
@@ -47,8 +47,8 @@ class Posts extends Component {
           lookupOptions['headers']['X-CSRFToken'] = csrfToken
        }
 
-      fetch(endpoint, lookupOptions)
-      .then(function(response){
+      fetch(endpoint, lookupOptions) 
+      .then(function(response){  // Returns a JS Promise
           return response.json()
       }).then(function(responseData){
           console.log(responseData)
@@ -93,7 +93,7 @@ class Posts extends Component {
       
   }
 
-  componentDidMount(){
+  componentDidMount(){  // Life cycle method to call fetch method and to lost posts.
       this.setState({
           posts: [],
           postsListClass: "card",

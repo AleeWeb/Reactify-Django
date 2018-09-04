@@ -9,6 +9,7 @@ import PostCreate from './posts/PostCreate'
 class App extends Component {
   render() {
     return (
+
       <BrowserRouter>
           <Switch>
             <Route exact path='/posts/create' component={PostCreate}/>
