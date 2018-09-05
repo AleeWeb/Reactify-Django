@@ -1,4 +1,4 @@
 
 
-React and Django integration training following YouTube tutorial and https://github.com/codingforentrepreneurs/Reactify-Django .
+React and Django integration <strong>training</strong> following YouTube tutorial and https://github.com/codingforentrepreneurs/Reactify-Django .
 
